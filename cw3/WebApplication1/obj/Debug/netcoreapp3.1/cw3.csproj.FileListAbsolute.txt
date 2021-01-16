@@ -1,0 +1,5 @@
+C:\Users\Karolina\Source\Repos\APBD\cw3\WebApplication1\obj\Debug\netcoreapp3.1\cw3.csprojAssemblyReference.cache
+C:\Users\Karolina\Source\Repos\APBD\cw3\WebApplication1\obj\Debug\netcoreapp3.1\cw3.AssemblyInfoInputs.cache
+C:\Users\Karolina\Source\Repos\APBD\cw3\WebApplication1\obj\Debug\netcoreapp3.1\cw3.AssemblyInfo.cs
+C:\Users\Karolina\Source\Repos\APBD\cw3\WebApplication1\obj\Debug\netcoreapp3.1\cw3.csproj.CoreCompileInputs.cache
+C:\Users\Karolina\Source\Repos\APBD\cw3\WebApplication1\obj\Debug\netcoreapp3.1\cw3.MvcApplicationPartsAssemblyInfo.cache
