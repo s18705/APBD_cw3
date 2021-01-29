@@ -11,11 +11,11 @@ namespace WebApplication1.DTOs.Requests
         [RegularExpression("^s[0-9]+$")]
         public string IndexNumber { get; set; }
 
-        [Required(ErrorMessage = "Musisz podac imie")]
+        [Required(ErrorMessage = "Imie jest wymagane")]
         [MaxLength(10)]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Musisz podac nazwisko")]
+        [Required(ErrorMessage = "Nazwisko jesy wymagane")]
         [MaxLength(17)]
         public string LastName { get; set; }
         
