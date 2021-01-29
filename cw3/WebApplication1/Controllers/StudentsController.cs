@@ -28,7 +28,7 @@ namespace WebApplication1.cw3
                     "from Student inner join Enrollment on Student.IdEnrollment = Enrollment.IdEnrollment " +
                     "inner join Studies on Enrollment.IdStudy = Studies.IdStudy";
 
-                client.Open();
+                client.Open(); //tuatj bym dodala?
                 var dr = com.ExecuteReader();
                 String students = "";
                 while (dr.Read())
