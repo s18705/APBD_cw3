@@ -50,7 +50,7 @@ namespace WebApplication1.cw3
         {
             string myId = "s1234";
             string SqlID = "'" + id + "'";
-            using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18967;Integrated Security=True"))
+            using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18705;Integrated Security=True"))
             using (var com = new SqlCommand())
             {
                 com.Connection = client;
