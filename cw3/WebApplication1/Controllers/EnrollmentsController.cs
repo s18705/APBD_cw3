@@ -29,7 +29,7 @@ namespace WebApplication1.Controllers
                 var transaction = connection.BeginTransaction();
 
 
-                //1. Czy studia istnieja?
+         
                 try
                 {
                     command.CommandText = "select IdStudies from Studies where name=@name";
