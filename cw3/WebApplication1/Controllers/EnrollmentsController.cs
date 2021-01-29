@@ -90,7 +90,7 @@ namespace WebApplication1.Controllers
             response.StudiesName = st.Subject;
             response.Semester = int.Parse(st.Semester);
             response.LastName = st.LastName;
-            return Ok(response + ". Nie wiem jak zwrocic Created");
+            return Ok(response + "  ");
         }
     }
 }
