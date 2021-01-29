@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
             st.Semester = "1";
             st.LastName = request.LastName;
 
-            using (var connection = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18967;Integrated Security=True"))
+            using (var connection = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18705;Integrated Security=True"))
             using (var command = new SqlCommand())
             {
 
@@ -43,9 +43,7 @@ namespace WebApplication1.Controllers
                         return BadRequest("Studia nie istnieja.");
                     }
                     int idStudies = (int)dr["IdStudies"];
-                    //Następnie odnajdujemy najnowszy wpis w tabeli Enrollments
-                    //zgodny ze studiami studenta i wartością Semester = 1(student zapisuje się na pierwszy
-                    //semestr).
+                   
 
                     command.CommandText = "select * from Enrollment " +
                         "where StartDate = (select MAX(StartDate) from Enrollment where idStudy=" + idStudies + ") " +
@@ -53,15 +51,13 @@ namespace WebApplication1.Controllers
 
                     var execread = command.ExecuteReader();
 
-                    //Jeśli tak wpis nie istnieje to dodajemy go do bazy danych (StartDate ustawiamy na aktualną datę).
-                    //Na końcu dodajemy wpis w tabeli Students.
+                   .
                     if (!execread.Read())
                     {
                         command.CommandText = "Insert into Enrollment values (" +
                             "(SELECT MAX(idEnrollment)+1 from Enrollment),1," + idStudies + ",GetDate()";
                     }
-                    //Pamiętamy o tym, aby sprawdzić czy indeks podany przez studenta jest unikalny. W przeciwnym
-                    //wypadku zgłaszamy błąd.
+                   
                     command.CommandText = "Select * from Student WHERE IndexNumber=@indexNumber";
                     command.Parameters.AddWithValue("indexNumber", request.IndexNumber);
 
